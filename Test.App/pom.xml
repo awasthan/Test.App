@@ -71,6 +71,7 @@
 		</repository>
 	</distributionManagement>
 	<scm>
-		<connection>scm:svn:https://DESKTOP-S0JOEKP/svn/SourceCode/Test.Application/trunk/Test.Application</connection>
+		<url>https://github.com/awasthan/Test.App</url>
+		<connection>scm:git:git://github.com/awasthan/Test.App.git</connection>
 	</scm>	
 </project>
