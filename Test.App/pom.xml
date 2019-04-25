@@ -17,7 +17,7 @@
 			<plugin>
 				<groupId>ibm.maven.plugins</groupId>
 				<artifactId>ace-maven-plugin</artifactId>
-				<version>11.10.4</version>
+				<version>11.10.5</version>
 
 				<configuration>
 					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>					
