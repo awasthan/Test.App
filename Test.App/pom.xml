@@ -64,11 +64,12 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>nexus-release</id>
+			<id>releases</id>
 			<name>Corporate Repository</name>
 			<url>${nexus.url}</url>
 			<layout>default</layout>
 		</repository>
+		
 	</distributionManagement>
 	<scm>
 		<url>git@github.com:awasthan/Test.App.git</url>
