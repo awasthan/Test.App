@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ibm.ace</groupId>
 	<artifactId>Test.App</artifactId>
-	<version>1.0.07-SNAPSHOT</version>
+	<version>1.0.10-SNAPSHOT</version>
 	<packaging>ace-bar</packaging>
 	<name>${project.artifactId}</name>
 
@@ -74,6 +74,5 @@
 	<scm>
 		<url>git@github.com:awasthan/Test.App.git</url>
 		<connection>scm:git:git@github.com:awasthan/Test.App.git</connection>
-                <tag>HEAD</tag>
 	</scm>	
 </project>
