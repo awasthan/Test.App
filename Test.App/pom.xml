@@ -20,7 +20,8 @@
 				<version>11.10.8.13</version>
 
 				<configuration>
-					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>					
+					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>	
+					<aceRunDir>${ace.rundir}</aceRunDir>
 					<barName>${project.build.directory}/ace/${project.artifactId}.bar</barName>
 					<workspace>${eclipse.workspace}</workspace>
 					<versionString />
