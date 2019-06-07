@@ -19,22 +19,4 @@ One sample properties file, DEV.properites' has been supplied with this applicat
 Leave defaultPropertiesFile, debugWorkspace and applyBarOverride values unchanged.
 
 
-<!--BelowIsSnippetFromPOM>
-<configuration>
-					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>	
-					<aceRunDir>${ace.rundir}</aceRunDir>
-					<barName>${project.build.directory}/ace/${project.artifactId}.bar</barName>
-					<workspace>${eclipse.workspace}</workspace>
-					<versionString />
-					<cleanBuild>true</cleanBuild>
-					<deployAsSource>true</deployAsSource>
-					<esql21>false</esql21>
-					<applicationName>${project.artifactId}</applicationName>
-					<configPropFileDirectory>${basedir}\properties</configPropFileDirectory>
-					<defaultPropertiesFile>${project.build.directory}/ace/${project.artifactId}.properties</defaultPropertiesFile>
-					<debugWorkspace>true</debugWorkspace>
-					<applyBarOverride>true</applyBarOverride>
-</configuration>
-</BelowIsSnippetFromPOM-->
-
 2) Leave all other values unchanged.
