@@ -19,6 +19,7 @@ One sample properties file, DEV.properites' has been supplied with this applicat
 Leave defaultPropertiesFile, debugWorkspace and applyBarOverride values unchanged.
 
 
+<!--BelowIsSnippetFromPOM>
 <configuration>
 					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>	
 					<aceRunDir>${ace.rundir}</aceRunDir>
@@ -34,5 +35,6 @@ Leave defaultPropertiesFile, debugWorkspace and applyBarOverride values unchange
 					<debugWorkspace>true</debugWorkspace>
 					<applyBarOverride>true</applyBarOverride>
 </configuration>
+</BelowIsSnippetFromPOM-->
 
 2) Leave all other values unchanged.
