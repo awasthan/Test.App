@@ -14,6 +14,7 @@ workspace: Here its value has been specified as "${eclipse.workspace}". This mea
 Leave versionString, cleanBuild, esql21 and applicationName parameter values unchanged.
 
 configPropFileDirectory: Leave it unchanged. The plugin will look for properties files at this location and create bar files correspondng to each properties file. If you have four environments, say DEV, QA, UAT and PROD, create four properties files namely DEV.properties, QA.properties, UAT.properties and PROD.properties. Plugin will create four bar files by overriding the parameters with values specified in respective properties file and will append version number in the file name e.g. DEV_1.0.15.bar, QA_1.0.15.bar, UAT_1.0.15.bar and PROD_1.0.15.bar.
+
 One sample properties file, DEV.properites' has been supplied with this application.
 
 Leave defaultPropertiesFile, debugWorkspace and applyBarOverride values unchanged.
