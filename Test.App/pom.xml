@@ -75,6 +75,6 @@
 	<scm>
 		<url>git@github.com:awasthan/Test.App.git</url>
 		<connection>scm:git:git@github.com:awasthan/Test.App.git</connection>
-	  <tag>Test.App-1.0.11</tag>
+	  <tag>HEAD</tag>
   </scm>	
 </project>
