@@ -19,4 +19,6 @@ spec:
         image: $targetrepo/$appname
         imagePullPolicy: Always
         ports:
-        - containerPort: 9080
+        - containerPort: 7600
+        - containerPort: 7800
+        - containerPort: 7843
