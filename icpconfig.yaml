@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    insecure-skip-tls-verify: true
+    server: https://9.30.214.196:8001
+  name: mycluster.icp
+contexts:
+- context:
+    cluster: mycluster.icp
+    namespace: default
+    user: admin
+  name: mycluster.icp-context
+current-context: mycluster-context
+kind: Config
+preferences: {}
+users:
+- name: admin
+  user:
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiZDRkOTJlOTljOTExMDI3NzU3NDMyYjEzYjAxZjcwNjdhNmYyN2Y5ZiIsInJlYWxtTmFtZSI6ImN1c3RvbVJlYWxtIiwidW5pcXVlU2VjdXJpdHlOYW1lIjoiYWRtaW4iLCJpc3MiOiJodHRwczovL215Y2x1c3Rlci5pY3A6OTQ0My9vaWRjL2VuZHBvaW50L09QIiwiYXVkIjoiMGQ5Y2YyZDEyNTdkMDJhMTA0ZGU0NDkxODE5ZjIzMWMiLCJleHAiOjE1NTg3NTU4MzAsImlhdCI6MTU1ODcyNzAzMCwic3ViIjoiYWRtaW4iLCJ0ZWFtUm9sZU1hcHBpbmdzIjpbXX0.k3lmfuy297RnJDztTXYgU4ojmIZLSy7n_fhOdZAPBwHLc09dbuY5VW8eSNMoLrWuAuQUqCq8Xi3hAWgm_MgWejUGQv0veSuZ_geHUk2Vu70qNOLblPgpp3xPxEKLBHdlM_B1jBqB6ZeG43fp5Izo8BK7JXvV7fnXaUXHrwZgzZfu6m2ZWK6xcnzZyeQhWD7B3DaYbuBZHBCG-BgzeBlJEjxFlksXSnJXvLnuR2Wu80dLgz8TFz0LsP9mJj2kG_i8s2yjq6TTpQKeyMVGexKv0FOX6rA4-bmLu5wmpJudkfIqyqR84jDwAJG5YC9oPrEMjao3xIQB3b6xyZQWCxeNEA
