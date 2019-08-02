@@ -7,7 +7,7 @@ clusters:
 contexts:
 - context:
     cluster: mycluster.icp
-    namespace: ace
+    namespace: default
     user: admin
   name: mycluster.icp-context
 current-context: mycluster-context
