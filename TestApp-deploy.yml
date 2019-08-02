@@ -32,11 +32,14 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 7600
+    - name: webui
+      port: 7600
       targetPort: 7600
-    - port: 7800
+    - name: http
+      port: 7800
       targetPort: 7800
-    - port: 7843
+    - name: https
+      port: 7843
       targetPort: 7843
   selector:
    app: $appname
