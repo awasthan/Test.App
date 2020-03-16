@@ -17,6 +17,10 @@ zip ${JOB_NAME}.zip Test.App_DEV_${BUILD_NUMBER}.bar
  """
 nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file: '${JOB_NAME}.zip', type: 'zip']], credentialsId: 'admin-nexus', groupId: 'com.ibm.esb', nexusUrl: '9.30.180.133:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'releases', version: '$BUILD_NUMBER'
 	}
+sshagent (credentials: ['jenkins-gihub']) {
+    sh("git tag -a ${BUILD_NUMBER} -m 'Tagged by Jenkins build'")
+    sh('git push git@github.com:awasthan/Sum_Service.git --tags')
+}
 }
 }
 }
