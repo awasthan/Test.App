@@ -19,7 +19,7 @@ nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file
 	}
 sshagent (credentials: ['jenkins-gihub']) {
     sh("git tag -a ${BUILD_NUMBER} -m 'Tagged by Jenkins build'")
-    sh('git push git@github.com:awasthan/Sum_Service.git --tags')
+    sh('git push git@github.com:awasthan/Test.App.git --tags')
 }
 }
 }
