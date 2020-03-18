@@ -23,5 +23,6 @@ sshagent (credentials: ['jenkins-gihub']) {
     sh('git push git@github.com:awasthan/Test.App.git --tags')
 }
 }
+cleanWs()
 }
 }
