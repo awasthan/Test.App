@@ -4,10 +4,10 @@ timestamps {
 
 node () {
   wrap([$class: 'Xvfb']) {
-	stage ('Test.App.job - Checkout') {
+	stage ('Test.App - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins-github', url: 'https://github.com/awasthan/Test.App.git']]]) 
 	}
-	stage ('Test.App.job - Build') {
+	stage ('Test.App - Build') {
  	
 sh """ 
 source /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile
