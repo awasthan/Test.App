@@ -13,7 +13,8 @@ sh """
 source /opt/IBM/ace-11.0.0.7/server/bin/mqsiprofile
 mqsicreatebar -data . -b ${JOB_NAME}.bar -a ${JOB_NAME}
 mqsiapplybaroverride -b ${JOB_NAME}.bar -p ${JOB_NAME}/properties/DEV.properties -o ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar -r
-zip ${JOB_NAME}.zip Test.App_DEV_${BUILD_NUMBER}.bar 
+mqsiapplybaroverride -b ${JOB_NAME}.bar -p ${JOB_NAME}/properties/QA.properties -o ${JOB_NAME}_QA_${BUILD_NUMBER}.bar -r
+zip ${JOB_NAME}.zip ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar ${JOB_NAME}_QA_${BUILD_NUMBER}.bar
  """
 nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file: '${JOB_NAME}.zip', type: 'zip']], credentialsId: 'admin-nexus', groupId: 'com.ibm.esb', nexusUrl: '9.30.180.133:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'releases', version: '$BUILD_NUMBER'
 	}
