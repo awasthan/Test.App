@@ -19,7 +19,7 @@ zip ${JOB_NAME}.zip ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar ${JOB_NAME}_QA_${BUILD_N
 nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file: '${JOB_NAME}.zip', type: 'zip']], credentialsId: 'admin-nexus', groupId: 'com.ibm.esb', nexusUrl: 'gsilab-devops.GSI-Labs-IBM.cloud:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'releases', version: '$BUILD_NUMBER'
 	}
 sshagent (credentials: ['jenkins-gihub']) {
-    sh("git tag -a ${BUILD_NUMBER} -m 'Tagged by Jenkins build'")
+    sh("git tag -a ${JOB_NAME}_${BUILD_NUMBER} -m 'Tagged by Jenkins build'")
     sh('git push git@github.com:awasthan/Test.App.git --tags')
 }
 }
