@@ -9,8 +9,7 @@ node () {
 	}
 	stage ('Test.App - Build') {
  	
-sh """ 
-#!/bin/bash
+sh label: '', script: '''#!/bin/bash
 source mqsiprofile
 mqsicreatebar -data . -b ${JOB_NAME}.bar -a ${JOB_NAME}
 mqsiapplybaroverride -b ${JOB_NAME}.bar -p ${JOB_NAME}/properties/DEV.properties -o ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar -r
