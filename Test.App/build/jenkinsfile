@@ -15,7 +15,7 @@ mqsicreatebar -data . -b ${JOB_NAME}.bar -a ${JOB_NAME}
 mqsiapplybaroverride -b ${JOB_NAME}.bar -p ${JOB_NAME}/properties/DEV.properties -o ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar -r
 mqsiapplybaroverride -b ${JOB_NAME}.bar -p ${JOB_NAME}/properties/QA.properties -o ${JOB_NAME}_QA_${BUILD_NUMBER}.bar -r
 zip ${JOB_NAME}.zip ${JOB_NAME}_DEV_${BUILD_NUMBER}.bar ${JOB_NAME}_QA_${BUILD_NUMBER}.bar'''
-nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file: '${JOB_NAME}.zip', type: 'zip']], credentialsId: 'admin-nexus', groupId: 'com.ibm.esb', nexusUrl: '127.0.0.1:8444/nexus/', nexusVersion: 'nexus3', protocol: 'https', repository: 'releases', version: '$BUILD_NUMBER'
+nexusArtifactUploader artifacts: [[artifactId: '$JOB_NAME', classifier: '', file: '${JOB_NAME}.zip', type: 'zip']], credentialsId: 'admin-nexus', groupId: 'com.ibm.esb', nexusUrl: '127.0.0.1:8444/nexus', nexusVersion: 'nexus3', protocol: 'https', repository: 'releases', version: '$BUILD_NUMBER'
 	}
 sshagent (credentials: ['jenkins-gihub']) {
     sh("git tag -a ${JOB_NAME}_${BUILD_NUMBER} -m 'Tagged by Jenkins build'")
